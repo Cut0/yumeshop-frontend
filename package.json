@@ -8,7 +8,7 @@
     "lint": "yarn lint:eslint & yarn lint:prettier",
     "lint:eslint": "eslint --ext .ts,.tsx,.js .",
     "lint:prettier": "prettier --ignore-path .prettierignore  --check '**/*.{js,ts,tsx,css}'",
-    "format": "yarn format:eslint & yarn format:prettier",
+    "format": "yarn format:eslint && yarn format:prettier",
     "format:eslint": "eslint --fix --ext .ts,.tsx,.js .",
     "format:prettier": "prettier --ignore-path .prettierignore  --write '**/*.{js,ts,tsx,css}'",
     "storybook": "start-storybook -p 6006 -s ./public",
