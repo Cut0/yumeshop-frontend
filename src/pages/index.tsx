@@ -2,7 +2,8 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { css } from '@emotion/react';
-import { Caruosel } from 'src/components/common/Carousel';
+import { colors } from '../styles/Tokens';
+import { Caruosel } from '../components/common/Carousel';
 import { useShopItems } from '../features/shopItems/ShopItemsHooks';
 
 const Home: NextPage = () => {
@@ -28,7 +29,7 @@ const Home: NextPage = () => {
         `}
       >
         <Caruosel>
-          {shopItems.data !== undefined &&
+          {shopItems.data !== undefined && shopItems.error === undefined ? (
             shopItems.data
               .map(({ thumbnail }, index) => ({
                 key: index,
@@ -49,7 +50,16 @@ const Home: NextPage = () => {
                     layout="responsive"
                   />
                 </div>
-              ))}
+              ))
+          ) : (
+            <div
+              css={css`
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                background-color: ${colors.Gray};
+              `}
+            />
+          )}
         </Caruosel>
       </div>
     </main>
