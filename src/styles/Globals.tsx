@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { css, Global } from '@emotion/react';
-import { fonts } from './Tokens';
+import { colors, fonts } from './Tokens';
 import 'ress';
 
 export const GlobalStyle: FC = () => (
@@ -12,6 +12,7 @@ export const GlobalStyle: FC = () => (
         margin: 0;
         font-family: ${fonts.NotoSansJP};
         line-height: 1.5;
+        background-color: ${colors.YumeWhiteGreen};
       }
 
       a {
