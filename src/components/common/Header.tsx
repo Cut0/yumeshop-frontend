@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Logo } from 'src/components/common/Icons/Logo';
+import { Logo } from 'src/components/common/Icons/LogoSvgIcon';
 import { colors } from 'src/styles/Tokens';
 import Link from 'next/link';
 import { css } from '@emotion/react';
