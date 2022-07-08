@@ -49,6 +49,7 @@ export const CampaignsList: FC = () => {
               <CampaignCard key={item.id} campaign={item} />
             ))
           : [...Array.from({ length: 4 })].map((_, i) => (
+              // eslint-disable-next-line react/no-array-index-key
               <CampaignCardSkeleton key={String(i)} />
             ))}
       </div>
