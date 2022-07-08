@@ -10,6 +10,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
+      - name: Authenticate with private NPM package
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
