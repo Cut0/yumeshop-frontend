@@ -2,9 +2,10 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { css } from '@emotion/react';
+import { CampaignsList } from 'src/components/top/CampaignsList';
+import { usePromotions } from '../features/promotions/PromotionsHooks';
 import { colors } from '../styles/Tokens';
 import { Carousel } from '../components/common/Carousel';
-import { usePromotions } from '../features/promotions/PromotionsHooks';
 
 const Home: NextPage = () => {
   const promotions = usePromotions();
@@ -32,13 +33,13 @@ const Home: NextPage = () => {
           {promotions.data !== undefined && promotions.error === undefined ? (
             promotions.data.map(({ id, image }) => (
               <div
+                key={id}
                 css={css`
                   display: inline-block;
                   width: 100%;
                 `}
               >
                 <Image
-                  key={id}
                   src={image}
                   width="300"
                   height="300"
@@ -56,7 +57,20 @@ const Home: NextPage = () => {
             />
           )}
         </Carousel>
+        <div
+          css={css`
+            margin: 64px 16px;
+          `}
+        />
       </div>
+      <h2
+        css={css`
+          margin-bottom: 8px;
+        `}
+      >
+        キャンペーン
+      </h2>
+      <CampaignsList />
     </main>
   );
 };
