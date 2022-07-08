@@ -1154,10 +1154,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@cut0/yumeshop-mock@^1.0.3":
-  version "1.0.3"
-  resolved "https://npm.pkg.github.com/download/@cut0/yumeshop-mock/1.0.3/3b88e470d3e5249dee621f2e2cbb1b9c0639dfa9489971db252f2aa44c1fbb14#23aa85f77a248be735168f22a64c3a57959bd4c3"
-  integrity sha512-wgUnty39MnCoxIuT10OhFItnhzjnRxkMafOZGcF6O0Zp5tu9gdg/4BaXM/4huPmM5GSQq6PzSaoqwmM1Z5w/5Q==
+"@cut0/yumeshop-mock@^1.0.5":
+  version "1.0.5"
+  resolved "https://npm.pkg.github.com/download/@cut0/yumeshop-mock/1.0.5/175b1713b430c17d96cf893b5043e57624f5710ce90b8013724bd5ff9a1681f7#36f3c046b90f8200318e4e7aebd664c889d08e1c"
+  integrity sha512-XbR0KsXzMxOh4ZT0LWwa5+rpH1sqM/5IkMnAZj3bMqqQqkTEXTe5822GFQtYRFhOYFZPb6TBYkCBvIap0qTOoA==
   dependencies:
     cookie-parser "~1.4.4"
     debug "~2.6.9"
