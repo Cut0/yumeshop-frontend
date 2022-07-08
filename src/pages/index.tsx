@@ -4,10 +4,10 @@ import Image from 'next/image';
 import { css } from '@emotion/react';
 import { colors } from '../styles/Tokens';
 import { Carousel } from '../components/common/Carousel';
-import { useShopItems } from '../features/shopItems/ShopItemsHooks';
+import { usePromotions } from '../features/promotions/PromotionsHooks';
 
 const Home: NextPage = () => {
-  const shopItems = useShopItems({});
+  const promotions = usePromotions();
 
   return (
     <main
@@ -29,28 +29,23 @@ const Home: NextPage = () => {
         `}
       >
         <Carousel>
-          {shopItems.data !== undefined && shopItems.error === undefined ? (
-            shopItems.data
-              .map(({ thumbnail }, index) => ({
-                key: index,
-                src: thumbnail,
-              }))
-              .map(({ key, src }) => (
-                <div
-                  css={css`
-                    display: inline-block;
-                    width: 100%;
-                  `}
-                >
-                  <Image
-                    key={key}
-                    src={src}
-                    width="300"
-                    height="300"
-                    layout="responsive"
-                  />
-                </div>
-              ))
+          {promotions.data !== undefined && promotions.error === undefined ? (
+            promotions.data.map(({ id, image }) => (
+              <div
+                css={css`
+                  display: inline-block;
+                  width: 100%;
+                `}
+              >
+                <Image
+                  key={id}
+                  src={image}
+                  width="300"
+                  height="300"
+                  layout="responsive"
+                />
+              </div>
+            ))
           ) : (
             <div
               css={css`
