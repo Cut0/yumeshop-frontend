@@ -1,15 +1,15 @@
 import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 import { css } from '@emotion/react';
-import { Caruosel } from './Carousel';
+import { Carousel } from './Carousel';
 
-const meta: ComponentMeta<typeof Caruosel> = {
-  component: Caruosel,
+const meta: ComponentMeta<typeof Carousel> = {
+  component: Carousel,
 };
 export default meta;
 
-export const Default: ComponentStoryObj<typeof Caruosel> = {
+export const Default: ComponentStoryObj<typeof Carousel> = {
   render: (args) => (
-    <Caruosel {...args}>
+    <Carousel {...args}>
       <div
         key="1"
         css={css`
@@ -46,6 +46,6 @@ export const Default: ComponentStoryObj<typeof Caruosel> = {
       >
         BOX3
       </div>
-    </Caruosel>
+    </Carousel>
   ),
 };

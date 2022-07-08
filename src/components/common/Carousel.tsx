@@ -9,7 +9,7 @@ type CarouselProps = {
   children: ReactNode;
 };
 
-export const Caruosel: FC<CarouselProps> = ({ children }) => {
+export const Carousel: FC<CarouselProps> = ({ children }) => {
   const { refContainer, prevBtnOnClick, nextBtnOnClick } = useSideScroll();
   return (
     <div

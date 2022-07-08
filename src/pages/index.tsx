@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { css } from '@emotion/react';
 import { colors } from '../styles/Tokens';
-import { Caruosel } from '../components/common/Carousel';
+import { Carousel } from '../components/common/Carousel';
 import { useShopItems } from '../features/shopItems/ShopItemsHooks';
 
 const Home: NextPage = () => {
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
           margin: 0 auto;
         `}
       >
-        <Caruosel>
+        <Carousel>
           {shopItems.data !== undefined && shopItems.error === undefined ? (
             shopItems.data
               .map(({ thumbnail }, index) => ({
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
               `}
             />
           )}
-        </Caruosel>
+        </Carousel>
       </div>
     </main>
   );
