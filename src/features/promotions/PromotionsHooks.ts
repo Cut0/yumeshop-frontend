@@ -2,7 +2,7 @@ import useSWR from 'swr';
 import { PromotionsApi, Promotion } from '@cut0/yumeshop-mock';
 import { handleApiError } from '../common/Api';
 
-const getKey = () => [`exampless/userData`];
+const getKey = () => [`promotions/getList`];
 
 const fetcher = async () => {
   const response = await new PromotionsApi()

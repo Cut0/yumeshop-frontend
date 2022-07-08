@@ -6,7 +6,7 @@ import {
 } from '@cut0/yumeshop-mock';
 import { handleApiError } from '../common/Api';
 
-const getKey = () => [`exampless/userData`];
+const getKey = () => [`shopitems/getList`];
 
 const fetcher = async (params: GetShopItemsRequest) => {
   const response = await new ShopItemsApi()
